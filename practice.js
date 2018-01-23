@@ -17,7 +17,13 @@ var name = 'Tyler';
   If the argument you passed in is equal to 'Tyler', return true. If it's not, return false.
 */
 
-//Code Here
+function isTyler(name){
+  if(name==='Tyler'){
+    return true;
+  }else{
+    return false;
+  }
+}//Code Here
 
 
 
@@ -27,7 +33,10 @@ var name = 'Tyler';
   Create a function called getName that uses prompt() to prompt the user for their name and then returns the given name.
 */
 
-//Code Here
+function getName(){
+  let userName = prompt("What is your name?");
+  return userName;
+}//Code Here
 
 
 
@@ -40,7 +49,9 @@ var name = 'Tyler';
   Example: "Welcome, Bob Joe"
 */
 
-//Code Here
+function welcome(){
+  alert("Welcome, " + getName());
+}//Code Here
 
 
 
@@ -50,7 +61,7 @@ var name = 'Tyler';
   What is the difference between arguments and parameters?
 */
 
-//Answer Here
+//An argument is a value passed into a function and parameters are placeholders to be filled by arguments later on when the function is invoked.
 
 
 
@@ -60,7 +71,7 @@ var name = 'Tyler';
   What are all the falsy values in JavaScript and how do you check if something is falsy?
 */
 
-//Answer Here
+//The falsey values are false, "", NaN, Null, undefined, and 0. You can use and If/else statement to check if something has a true or false value.
 
 
 
@@ -70,7 +81,9 @@ var name = 'Tyler';
   Create a function called myName that returns your name
 */
 
-//Code Here
+function myName(){
+  return "Mike";
+}//Code Here
   
 
 
@@ -78,7 +91,9 @@ var name = 'Tyler';
   Now save the function definition of myName into a new variable called newMyName
 */
 
-//Code Here
+function newMyName(){
+  myName();
+} //Code Here
 
 
 
@@ -86,7 +101,7 @@ var name = 'Tyler';
   Now alert the result of invoking newMyName
 */
 
-// Code Here
+alert(newMyName)// Code Here
 
 
 
@@ -96,7 +111,11 @@ var name = 'Tyler';
   Create a function called outerFn which returns an anonymous function which returns your name.
 */
 
-//Code Here
+function outerFn(){
+  return function(){
+    return name;
+  };
+}//Code Here
 
 
 
@@ -104,6 +123,7 @@ var name = 'Tyler';
   Now save the result of invoking outerFn into a variable called innerFn.
 */
 
+let innerFn = outerFn();
 //Code Here
 
 
@@ -112,4 +132,4 @@ var name = 'Tyler';
   Now invoke innerFn.
 */
 
-// Code Here
+innerFn();// Code Here
